@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+
+@font-face {
+    font-family: Rubik;
+    /* font-style: normal; */
+    font-weight: 400;
+    src: url("/fonts/Rubik-VariableFont_wght.ttf") format('truetype');
+    /* font-display: swap; */
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
