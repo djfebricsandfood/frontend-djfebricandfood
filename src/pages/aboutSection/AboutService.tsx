@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Ship, Warehouse, Plane, Building, Truck, ClipboardCheck } from "lucide-react";
 
 const services = [

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Star } from "lucide-react";
+import { useGetProduct } from "./http/useGetProduct";
 
 const categories = [
   "Apparel & Clothing",
@@ -58,8 +59,19 @@ const products = [
   },
 ];
 
+
+
+
 const ProductGrid = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
+
+  const {data , isLoading} = useGetProduct();
+
+console.log(data, "data from useGetProduct");
+
+if (isLoading) {
+    return <div className="text-center text-gray-500">Loading...</div>;
+  }
 
   return (
     <section className="bg-white py-12">

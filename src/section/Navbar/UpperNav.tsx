@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Mail, MapPin, Facebook, Twitter, Youtube, Instagram, Search } from "lucide-react";
 
 const UpperNav = () => {

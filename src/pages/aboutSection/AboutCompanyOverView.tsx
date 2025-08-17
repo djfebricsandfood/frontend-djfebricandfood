@@ -1,4 +1,4 @@
-import React from "react";
+
 import { CheckCircle } from "lucide-react";
 
 import ShipImage from "../../assets/ShipImage.jpg";

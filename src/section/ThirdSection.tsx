@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Shield, Search, Award, Headphones, Package, Truck } from "lucide-react";
 
 const ThirdSection = () => {

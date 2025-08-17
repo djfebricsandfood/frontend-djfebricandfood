@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Package, Truck, Globe, Clock, DollarSign, Headphones, Play } from "lucide-react";
 import foodQulity from "../assets/Food_Quality.jpg"
 

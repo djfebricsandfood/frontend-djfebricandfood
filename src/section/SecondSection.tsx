@@ -1,4 +1,4 @@
-import React from "react";
+
 import { CheckCircle, Zap } from "lucide-react";
 import Image from "../assets/Import_Export_Image.jpg";
 

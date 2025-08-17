@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Package, ShieldCheck, Leaf } from "lucide-react";
 
 const HowWeWork = () => {

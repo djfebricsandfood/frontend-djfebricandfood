@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const PartnersMarquee = () => {
   // Dummy partner data - easily replaceable with real data later
