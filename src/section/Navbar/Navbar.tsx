@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MessageSquare, Menu, X } from "lucide-react"; 
-import logo from '../../assets/logo3.png';
+import logo from '../../assets/Group 2487.png';
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-3">
           <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
           <div>
-            <p className="text-sm font-bold">+0 123 888 555</p>
+            <p className="text-sm font-bold">+(555) 148-4567</p>
             <p className="text-xs text-gray-600">Have any Questions?</p>
           </div>
         </div>

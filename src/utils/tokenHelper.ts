@@ -41,3 +41,6 @@ export const deleteToken = () => {
   localStorage.removeItem("auth_token");
   return {};
 };
+
+
+export const imagUrl  = import.meta.env.VITE_IMAGE_URL

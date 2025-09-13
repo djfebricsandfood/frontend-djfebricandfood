@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Mock images for demo - replace with your actual imports
 import herosection1 from "../assets/hersosection1.jpg";
+import { useNavigate } from "react-router-dom";
 
 const herosection2 = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
 const herosection3 = "https://images.unsplash.com/photo-1567306301408-9b74779a11af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
@@ -38,6 +39,7 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const navigate = useNavigate()
 
   // Memoized slide change handler
   const handleSlideChange = useCallback((newSlide) => {
@@ -191,6 +193,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
             className="mt-8"
+            onClick={()=>navigate("/product")}
           >
             <motion.button
               whileHover={{ 

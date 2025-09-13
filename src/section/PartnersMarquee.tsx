@@ -1,19 +1,26 @@
+import aepc from "../assets/aepc.png";
+import apda from "../assets/apda.png";
+import fda from "../assets/fda.png";
+import fssai from "../assets/fssai.png";
+import gmp from "../assets/gmp.png";
+import halal from "../assets/halal.png";
+import kosher from "../assets/kosher.png";
+import spice from "../assets/spice-bord.jpg";
+
 
 
 const PartnersMarquee = () => {
   // Dummy partner data - easily replaceable with real data later
-  const partners = [
-    { id: 1, name: "HOTSALE", color: "text-gray-600" },
-    { id: 2, name: "iSTYLE", color: "text-black font-bold" },
-    { id: 3, name: "VELT", color: "text-green-600 font-bold", bgColor: "bg-green-100" },
-    { id: 4, name: "SENSALTA", color: "text-blue-600" },
-    { id: 5, name: "KARCHER", color: "text-yellow-600 font-bold" },
-    { id: 6, name: "Wendy's", color: "text-red-600 font-bold" },
-    { id: 7, name: "GLOBAL TRADE", color: "text-purple-600" },
-    { id: 8, name: "EXPORT HUB", color: "text-indigo-600 font-bold" },
-    { id: 9, name: "QUALITY FIRST", color: "text-orange-600" },
-    { id: 10, name: "RELIABLE IMPORTS", color: "text-teal-600" }
-  ];
+ const partners = [
+  { id: 1, img: aepc },
+  { id: 2, img: apda },
+  { id: 3, img: fda },
+  { id: 4, img: fssai },
+  { id: 5, img: gmp },
+  { id: 6, img: halal },
+  { id: 7, img: kosher },
+  { id: 8, img: spice },
+];
 
   // Duplicate the array to create seamless infinite scroll
   const duplicatedPartners = [...partners, ...partners, ...partners];
@@ -44,13 +51,14 @@ const PartnersMarquee = () => {
               <div
                 key={`${partner.id}-${index}`}
                 className={`flex-shrink-0 px-8 py-6 rounded-xl transition-all duration-300 hover:scale-110 cursor-pointer ${
-                  partner.bgColor || 'bg-white hover:bg-gray-100'
+                  partner?.bgColor || 'bg-white hover:bg-gray-100'
                 } shadow-md hover:shadow-lg`}
                 style={{ minWidth: '200px' }}
               >
                 <div className="text-center">
-                  <h3 className={`text-xl font-semibold ${partner.color} whitespace-nowrap`}>
-                    {partner.name}
+                  <h3 className={`text-xl font-semibold ${partner?.color} whitespace-nowrap`}>
+                    <img src={partner?.img} alt="" className="h-44" />
+                    {/* {partner?.name} */}
                   </h3>
                 </div>
               </div>
@@ -78,7 +86,7 @@ const PartnersMarquee = () => {
         }
         
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 20s linear infinite;
         }
         
         .animate-marquee:hover {

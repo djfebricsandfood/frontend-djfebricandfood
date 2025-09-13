@@ -3,15 +3,15 @@ import axiosInstance from "../../../utils/axios";
 import { generalPath } from "../../../utils/apiEndpoints";
 
 
-async function fetchData() {
-  const { data } = await axiosInstance.get(`${generalPath.getProductList}`);
+async function fetchData(activeCategory) {
+  const { data } = await axiosInstance.get(`${generalPath.getProductList}/${activeCategory}`);
   return data.data;
 }
 
-export const useGetProduct = () => {
+export const useGetProduct = (activeCategory) => {
   return useQuery({
-    queryKey: ["home"],
-    queryFn: fetchData,
+    queryKey: ["home" , activeCategory],
+    queryFn: ()=>fetchData(activeCategory),
     refetchOnWindowFocus: false,
   });
 };

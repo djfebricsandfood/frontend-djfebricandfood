@@ -10,11 +10,13 @@ const UpperNav = () => {
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
             <Mail className="w-4 h-4 text-red-500" />
-            <span>info@example.com</span>
+            <span>djfabricsfood@gmail.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <MapPin className="w-4 h-4 text-red-500" />
-            <span>Jos Mnheles Hutyio, 1430 Marasil</span>
+            <span>123 Main Street
+Springfield, IL 62701
+USA</span>
           </div>
         </div>
 

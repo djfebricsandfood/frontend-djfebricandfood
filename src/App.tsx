@@ -2,6 +2,8 @@ import React, { Suspense } from 'react'
 import Layout from './utils/Layout'
 import { Route, Routes } from 'react-router-dom'
 import CommingSoon from './utils/CommingSoon'
+import Contact from './section/Contact'
+import ProductDetailPage from './pages/productSection/ProductDetailPage'
 
 
 
@@ -14,20 +16,24 @@ const Blog = React.lazy(() => import('./section/Blog'))
 const App = () => {
   return (
     <>
-    <CommingSoon/>
-    </>
-    // <Layout>
-    //   <Suspense>
-    //     <Routes>
-    //       <Route path="/" element={<HomePage />} />
-    //       <Route path="/about" element={<About/>}  />
-    //       <Route path="/service" element={<Section />} />
-    //       <Route path="/product" element={<Product/>} />
-    //       <Route path="/blog" element={<Blog />} />
-    //     </Routes>
-    //   </Suspense>
+    {/* <CommingSoon/> */}
+    
+    <Layout>
+      <Suspense>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About/>}  />
+          <Route path="/service" element={<Section />} />
+          <Route path="/product" element={<Product/>} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
+        </Routes>
+      </Suspense>
 
-    // </Layout>
+    </Layout>
+    </>
+    
   )
 }
 

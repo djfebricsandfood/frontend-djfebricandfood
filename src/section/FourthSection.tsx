@@ -1,7 +1,9 @@
 
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const FourthSection = () => {
+  const navigate = useNavigate()
   return (
     <div className="max-w-7xl mx-auto px-6 py-16 text-center">
       {/* Section Heading */}
@@ -70,7 +72,7 @@ const FourthSection = () => {
       </div>
 
       {/* CTA Button */}
-      <button className="mt-10 border border-gray-800 px-6 py-3 font-medium text-sm hover:bg-gray-800 hover:text-white transition duration-300">
+      <button onClick={()=> navigate("/product")} className="mt-10 border cursor-pointer border-gray-800 px-6 py-3 font-medium text-sm hover:bg-gray-800 hover:text-white transition duration-300">
         VIEW DETAILS PRODUCTS!
       </button>
     </div>

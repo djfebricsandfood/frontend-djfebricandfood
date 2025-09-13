@@ -1,6 +1,8 @@
 
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
+import logo from "../assets/dj logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
@@ -12,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             {/* Logo Placeholder - You'll replace this with your actual logo */}
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6">
-              <span className="text-gray-800 font-bold text-2xl">DJ</span>
+             <img src={logo} className="w-full h-full" alt="" />
             </div>
             
             <p className="text-gray-300 leading-relaxed mb-6">
