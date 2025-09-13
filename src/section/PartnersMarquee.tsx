@@ -1,6 +1,6 @@
 import aepc from "../assets/aepc.png";
 import apda from "../assets/apda.png";
-import fda from "../assets/fda.png";
+import fda from "../assets/Fda.png";
 import fssai from "../assets/fssai.png";
 import gmp from "../assets/gmp.png";
 import halal from "../assets/halal.png";
