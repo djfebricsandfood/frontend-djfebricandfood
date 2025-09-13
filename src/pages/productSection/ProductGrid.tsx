@@ -1,40 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Star, ShoppingCart, X, Phone, Mail, MapPin, Send, Eye } from "lucide-react";
 import { useGetProduct } from "./http/useGetProduct";
 import { imagUrl } from "../../utils/tokenHelper";
 import { useNavigate } from "react-router-dom";
 import ContactPopup from "./ContactPopup";
+import { useGetCategory } from "./http/useGetCategory";
 
-const categories = [
-  "Apparel & Clothing",
-  "Food Grains & Vegetables",
-  "Indian Spices & Snacks",
-];
 
-// Contact popup component
 
 
 const ProductGrid = () => {
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
+
+
+  const [activeCategory, setActiveCategory] = useState(null);
   const [contactPopup, setContactPopup] = useState({
     isOpen: false,
     productName: ""
   });
 
-  const categoryMap = {
-    "Food Grains & Pulses": "fruits-vegetables",
-    "Indian Spices & Masalas": "snacks",
-    "Apparel & Clothing": "fabrics"
-  };
+   const {data : categoryData , isLoading : categoryLoading} = useGetCategory();
 
-  const apiCategory = categoryMap[activeCategory] || "fruits-vegetables";
+
+     useEffect(() => {
+    if (categoryData && categoryData.length > 0 && !activeCategory) {
+      setActiveCategory(categoryData[0]); 
+    }
+  }, [categoryData, activeCategory]);
+
+
+
+
+  const apiCategory = activeCategory?.name || "fruits-vegetables";
   const { data, isLoading } = useGetProduct(apiCategory);
 
-
    const navigate = useNavigate();
-
-  
-
   const openContactPopup = (productName) => {
     setContactPopup({
       isOpen: true,
@@ -52,10 +51,10 @@ const ProductGrid = () => {
 
 
   const handleDetailsPage = (id) => {
-    navigate(`/product/${id}`); // 👈 set id in URL
+    navigate(`/product/${id}`); 
   };
 
-  if (isLoading) {
+  if (isLoading || categoryLoading) {
     return (
       <div className="flex items-center justify-center py-20">
         <div className="text-center">
@@ -78,17 +77,17 @@ const ProductGrid = () => {
           </div>
 
           <div className="flex space-x-4 mb-8 overflow-x-auto pb-2">
-            {categories.map((cat, idx) => (
+            {categoryData?.map((cat, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all duration-200 ${
-                  activeCategory === cat
+                  activeCategory?.heading === cat?.heading
                     ? "bg-red-600 text-white shadow-lg transform scale-105"
                     : "bg-white text-gray-700 hover:bg-red-50 hover:text-red-600 shadow-md"
                 }`}
               >
-                {cat}
+                {cat?.heading}
               </button>
             ))}
           </div>

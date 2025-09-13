@@ -1,5 +1,7 @@
 import { ArrowUpRight, Package, Leaf, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useGetHomeData } from "./http/useGetHomeData";
+import { imagUrl } from "../utils/tokenHelper";
 
 const FourthSection = () => {
   const navigate = useNavigate();
@@ -9,32 +11,29 @@ const FourthSection = () => {
     navigate("/product");
   };
 
-  const products = [
-    {
-      id: 1,
-      title: "Apparel & Clothing",
-      description: "High-quality fabrics and ready-made garments for international fashion markets",
-      image: "https://plus.unsplash.com/premium_photo-1673356301535-2cc45bcc79e4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: Package,
-      features: ["Premium Quality", "Global Standards"]
-    },
-    {
-      id: 2,
-      title: "Food Grains & Vegetables",
-      description: "Authentic Indian grains and vegetables with superior nutritional value",
-      image: "https://plus.unsplash.com/premium_photo-1726750862897-4b75116bca34?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: Leaf,
-      features: ["Fresh & Natural", "Export Quality"]
-    },
-    {
-      id: 3,
-      title: "Indian Spices & Masalas",
-      description: "Premium quality spices that bring authentic Indian flavors worldwide",
-      image: "https://images.unsplash.com/photo-1623569559000-c3031217d717?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: Star,
-      features: ["Authentic Taste", "Pure & Organic"]
-    }
-  ];
+  const {data , isLoading} = useGetHomeData()
+
+
+  console.log(data , "data")
+
+
+
+
+
+
+  const products = data
+
+
+  if(isLoading){
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-500">Loading product details...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white py-20">
@@ -58,23 +57,23 @@ const FourthSection = () => {
 
         {/* Product Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {products.map((product) => {
-            const IconComponent = product.icon;
+          {products?.map((product) => {
+            // const IconComponent = product.icon;
             return (
               <div
-                key={product.id}
+                key={product?.id}
                 className="group bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
               >
                 {/* Image Container */}
                 <div className="relative overflow-hidden">
                   <img
-                    src={product.image}
-                    alt={product.title}
+                    src={`${imagUrl}/${product?.image}`}
+                    alt={product?.heading}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
-                    <IconComponent className="w-5 h-5 text-red-600 " />
+                    {/* <IconComponent className="w-5 h-5 text-red-600 " /> */}
                   </div>
                 </div>
 
@@ -82,32 +81,23 @@ const FourthSection = () => {
                 <div className="p-6 text-left">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="font-bold text-xl text-gray-900 group-hover:text-red-600 transition-colors duration-300">
-                      {product.title}
+                      {product?.heading}
                     </h3>
                     <button
                       onClick={handleNavigate}
                       className="p-2 rounded-full bg-gray-100 cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:rotate-45"
-                      aria-label={`View ${product.title} details`}
+                      aria-label={`View ${product?.heading} details`}
                     >
                       <ArrowUpRight className="w-5 h-5" />
                     </button>
                   </div>
                   
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    {product.description}
+                    {product?.description}
                   </p>
 
                   {/* Features */}
-                  <div className="flex flex-wrap gap-2">
-                    {product.features.map((feature, index) => (
-                      <span
-                        key={index}
-                        className="inline-flex items-center px-3 py-1 bg-red-50 text-red-600 text-xs font-medium rounded-full"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
+                 
                 </div>
               </div>
             );
