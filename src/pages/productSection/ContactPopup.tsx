@@ -37,7 +37,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
 
         // Remove all non-digits for checking length
         const digitsOnly = val.replace(/\D/g, "");
-
+        
         // Allow only up to 11 digits
         if (digitsOnly.length <= 11) {
             setValuee(val);
@@ -59,7 +59,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
             setSubmitStatus('submitting');
             console.log('Form Data:', data);
 
-
+             setValue("number" , value)
 
 
             mutate(data);
@@ -229,9 +229,9 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                             <Controller
                                 name="number"
                                 control={control}
-                                rules={{
-                                    required: 'Phone number is required'
-                                }}
+                                // rules={{
+                                //     required: 'Phone number is required'
+                                // }}
                                 render={({ field: { onChange, value } }) => (
                                     <div className="phone-input-wrapper">
                                         <PhoneInput
@@ -249,11 +249,11 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                     </div>
                                 )}
                             />
-                            {errors.number && (
+                            {/* {errors.number && (
                                 <p className="mt-1 text-xs text-red-400 flex items-center gap-1">
                                     <span>⚠️</span> {errors.number.message}
                                 </p>
-                            )}
+                            )} */}
                         </div>
 
                         {/* City and Country Row */}
