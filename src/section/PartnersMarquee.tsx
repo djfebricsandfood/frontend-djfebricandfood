@@ -65,11 +65,11 @@ const PartnersMarquee = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <p className="text-gray-500 text-sm">
             Join our network of 500+ trusted partners across 50+ countries
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* Custom CSS for Marquee Animation */}

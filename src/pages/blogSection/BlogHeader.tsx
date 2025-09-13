@@ -3,37 +3,7 @@ import { CalendarDays, ArrowLeft, Clock, User } from 'lucide-react';
 import { useGetBlog } from './http/useGetBlog';
 import { imagUrl } from '../../utils/tokenHelper';
 
-// Mock data based on your structure
-const mockBlogData = [
-  {
-    _id: "68c447e6bda3e4538e98e4b1",
-    heading: "How technology can help redraw the supply chain map",
-    description: "<p>Exploring innovative solutions and digital transformation strategies that are revolutionizing modern supply chain management across industries.</p>",
-    image: "/uploads/general/3d495d48c5-1757693926001.jpg",
-    createdAt: "2025-09-12T16:18:46.011Z"
-  },
-  {
-    _id: "68c447e6bda3e4538e98e4b2",
-    heading: "The Future of Digital Commerce",
-    description: "<p>Understanding the emerging trends and technologies that will shape the next generation of e-commerce platforms and customer experiences.</p>",
-    image: "/uploads/general/digital-commerce.jpg",
-    createdAt: "2025-09-11T14:22:15.011Z"
-  },
-  {
-    _id: "68c447e6bda3e4538e98e4b3",
-    heading: "Sustainable Business Practices in 2025",
-    description: "<p>A comprehensive guide to implementing environmentally conscious strategies that drive both profit and positive environmental impact.</p>",
-    image: "/uploads/general/sustainability.jpg",
-    createdAt: "2025-09-10T09:15:32.011Z"
-  },
-  {
-    _id: "68c447e6bda3e4538e98e4b4",
-    heading: "AI and Machine Learning in Modern Workflows",
-    description: "<p>Discover how artificial intelligence is transforming workplace productivity and creating new opportunities for business automation.</p>",
-    image: "/uploads/general/ai-workflow.jpg",
-    createdAt: "2025-09-09T11:45:18.011Z"
-  }
-];
+
 
 
 
@@ -57,26 +27,19 @@ const getTimeAgo = (dateString) => {
 const BlogListing = () => {
   const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  const {data } = useGetBlog()
+  const {data, isLoading: isLoadingBlog} = useGetBlog()
 
   console.log(selectedBlog?.image)
 
   
 
-  // Simulate API call
+  // Update blogs when data is available
   useEffect(() => {
-    const fetchBlogs = async () => {
-      setIsLoading(true);
-      // Simulate network delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+    if (data && Array.isArray(data)) {
       setBlogs(data);
-      setIsLoading(false);
-    };
-
-    fetchBlogs();
-  }, []);
+    }
+  }, [data]);
 
   // Handle browser refresh - reset to listing view
   useEffect(() => {
@@ -96,7 +59,7 @@ const BlogListing = () => {
     setSelectedBlog(null);
   };
 
-  if (isLoading) {
+  if (isLoadingBlog) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="flex flex-col items-center space-y-4">
@@ -261,7 +224,7 @@ const BlogListing = () => {
           ))}
         </div>
         
-        {blogs?.length === 0 && (
+        {blogs?.length === 0 && !isLoadingBlog && (
           <div className="text-center py-16">
             <p className="text-gray-500 text-lg">No blogs available at the moment.</p>
           </div>

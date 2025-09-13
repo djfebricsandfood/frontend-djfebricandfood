@@ -7,8 +7,8 @@ import ContactPopup from "./ContactPopup";
 
 const categories = [
   "Apparel & Clothing",
-  "Food Grains & Pulses",
-  "Indian Spices & Masalas",
+  "Food Grains & Vegetables",
+  "Indian Spices & Snacks",
 ];
 
 // Contact popup component

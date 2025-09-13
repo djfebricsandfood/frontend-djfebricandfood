@@ -16,9 +16,9 @@ const Blog = React.lazy(() => import('./section/Blog'))
 const App = () => {
   return (
     <>
-    {/* <CommingSoon/> */}
+    <CommingSoon/>
     
-    <Layout>
+    {/* <Layout>
       <Suspense>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -31,7 +31,7 @@ const App = () => {
         </Routes>
       </Suspense>
 
-    </Layout>
+    </Layout> */}
     </>
     
   )

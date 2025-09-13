@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 
+
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 

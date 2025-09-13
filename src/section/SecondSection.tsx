@@ -1,6 +1,6 @@
 
 import { CheckCircle, Zap } from "lucide-react";
-import Image from "../assets/Import_Export_Image.jpg";
+import Image from "../assets/wharehouse.png";
 
 const SecondSection = () => {
   return (
@@ -72,14 +72,14 @@ const SecondSection = () => {
         <div className="flex-1 lg:flex-shrink-0">
           <div className="relative">
             {/* Main building image placeholder */}
-            <div className="w-full h-72 lg:h-[98vh] bg-gradient-to-br from-red-100 to-red-200  overflow-hidden shadow-xl">
+            <div className="w-full h-72 lg:h-[80vh] bg-gradient-to-br my-auto  overflow-hidden shadow-xl">
               {/* Building facade mockup */}
               <img src={Image} alt="" />
             </div>
             
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500 rounded-full opacity-80"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-red-300 rounded-full opacity-60"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6  rounded-full opacity-60"></div>
           </div>
         </div>
         

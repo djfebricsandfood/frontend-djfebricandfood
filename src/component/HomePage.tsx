@@ -17,7 +17,7 @@ const HomePage = () => {
     <FourthSection/>
     {/* <GallerySection/> */}
     <QualityTrustSection/>
-    <TestimonialsSection/>
+    {/* <TestimonialsSection/> */}
     <PartnersMarquee/>
     </>
   )
