@@ -3,24 +3,34 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Kathleen Smith",
-    company: "Fuel Company",
-    text: "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
-    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    name: "Amit Verma",
+    company: "Global Textiles Pvt. Ltd.",
+    text: "Working with DJ Fabrics and Food has been seamless. Their fabrics meet international quality standards, and the timely delivery helped us fulfill large export orders without delays. Truly a reliable partner in the global market.",
+    img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80",
     rating: 5,
     bg: "bg-white",
     textColor: "text-gray-800",
   },
   {
-    name: "John Martin",
-    company: "Restoration Company",
-    text: "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    name: "Sophia Rodriguez",
+    company: "Mediterranean Food Imports",
+    text: "We have been sourcing food products from DJ Fabrics and Food for the past two years. Their quality, packaging, and professional handling of international shipments make them stand out. A trustworthy partner for consistent supplies.",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
     rating: 5,
     bg: "bg-gray-900",
     textColor: "text-white",
   },
+  {
+    name: "James Anderson",
+    company: "UK Apparel Traders",
+    text: "DJ Fabrics and Food has been instrumental in expanding our product range. Their premium fabrics are appreciated by our customers, and the smooth import process makes collaboration effortless.",
+    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
+    rating: 4,
+    bg: "bg-white",
+    textColor: "text-gray-800",
+  },
 ];
+
 
 const TestimonialSection = () => {
   return (

@@ -43,7 +43,7 @@ const FourthSection = () => {
           />
           <div className="p-6">
             <h3 className="font-semibold text-lg flex items-center justify-between">
-              Food Grains & Pulses
+              Food Grains & Vegitables
               <ArrowUpRight className="w-5 h-5 text-gray-500" />
             </h3>
             <p className="mt-2 text-sm text-gray-600">

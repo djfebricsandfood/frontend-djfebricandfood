@@ -2,6 +2,7 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
 import logo from "../assets/dj logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,67 +29,97 @@ const Footer = () => {
 
           {/* Useful Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Useful Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  About us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Work at Future Learn
-                </a>
-              </li>
-            </ul>
-          </div>
+      <h3 className="text-xl font-bold mb-6">Useful Links</h3>
+      <ul className="space-y-3">
+        <li>
+          <Link
+            to="/"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/services"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/contact"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Contact Us
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/work-at-future-learn"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Work at Future Learn
+          </Link>
+        </li>
+      </ul>
+    </div>
 
           {/* Our Products */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Our Products</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Indian Spices & Masalas
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Food Grains & Pulses
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Apparel & Clothing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Premium Fabrics
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Textile Materials
-                </a>
-              </li>
-            </ul>
-          </div>
+      <h3 className="text-xl font-bold mb-6">Our Products</h3>
+      <ul className="space-y-3">
+        <li>
+          <Link
+            to="/product"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Indian Spices & Masalas
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/product"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Food Grains & Pulses
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/product"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Apparel & Clothing
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/product"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Premium Fabrics
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/product"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Textile Materials
+          </Link>
+        </li>
+      </ul>
+    </div>
 
           {/* Get In Touch */}
           <div>
@@ -101,7 +132,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm">Email</p>
                   <a href="mailto:contact@djfabrics.com" className="text-white hover:text-red-400 transition-colors duration-300">
-                    contact@djfabrics.com
+                    djfabricsfood@gmail.com
                   </a>
                 </div>
               </div>
@@ -111,7 +142,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm">Call Us</p>
                   <a href="tel:+911234567890" className="text-white hover:text-red-400 transition-colors duration-300">
-                    +91 123 456 7890
+                    +(91) 7610645417
                   </a>
                 </div>
               </div>
@@ -121,8 +152,9 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm">Address</p>
                   <p className="text-white">
-                    123 Export Plaza, Trade District<br />
-                    Mumbai, India 400001
+                    Sector E , 6 Shivdham Colony <br />
+                    Limbodi , Indore - 452001 (M.P), India
+                    
                   </p>
                 </div>
               </div>

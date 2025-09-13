@@ -317,8 +317,8 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
 
           {product.subProducts && product.subProducts.length > 0 && (
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Available Variants</h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Available Products</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
                     {product.subProducts.map((subProduct) => (
                       <div key={subProduct._id} className="border-[#E7000B] border shadow-md scale-105 rounded-lg p-3 hover:shadow-md transition-shadow">
                         <img
@@ -377,16 +377,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
                   <span>Get Export Quote</span>
                 </button>
                 
-                <div className="grid grid-cols-2 gap-4">
-                  <button className="border border-gray-300 hover:border-gray-400 text-gray-700 font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
-                    <Phone className="h-4 w-4" />
-                    <span>Call Now</span>
-                  </button>
-                  <button className="border border-gray-300 hover:border-gray-400 text-gray-700 font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
-                    <Mail className="h-4 w-4" />
-                    <span>Email</span>
-                  </button>
-                </div>
+               
               </div>
         </div>
       </div>

@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-3">
           <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
           <div>
-            <p className="text-sm font-bold">+(555) 148-4567</p>
+             <p className="text-sm font-bold">+(91) 7610645417</p>
             <p className="text-xs text-gray-600">Have any Questions?</p>
           </div>
         </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-3 px-6 py-4 bg-gray-50">
             <MessageSquare className="w-5 h-5 text-red-500" />
             <div>
-              <p className="text-sm font-bold">+0 123 888 555</p>
+              <p className="text-sm font-bold">+(91) 7610645417</p>
               <p className="text-xs text-gray-600">Have any Questions?</p>
             </div>
           </div>

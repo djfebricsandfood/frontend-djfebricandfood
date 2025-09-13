@@ -31,12 +31,10 @@ const PartnersMarquee = () => {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Our Partners
+          <h2 className="text-2xl lg:text-2xl font-bold text-gray-900 mb-4">
+           Membership & Certification
           </h2>
-          <p className="text-gray-600 text-lg">
-            Trusted by leading companies worldwide
-          </p>
+          
         </div>
 
         {/* Marquee Container */}

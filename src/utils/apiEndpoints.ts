@@ -7,5 +7,6 @@ export const generalPath = {
     getProductByCategory: "/api/product/category/",
     getProductBySubCategory: "/api/product/subcategory/",
     getProductByBrand: "/api/product/brand/",
-    sendEnqury : "/api/general/contact"
+    sendEnqury : "/api/general/contact",
+    getBlog : "/api/general/blog"
 }

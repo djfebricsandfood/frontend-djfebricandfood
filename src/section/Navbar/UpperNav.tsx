@@ -14,9 +14,7 @@ const UpperNav = () => {
           </div>
           <div className="flex items-center space-x-2">
             <MapPin className="w-4 h-4 text-red-500" />
-            <span>123 Main Street
-Springfield, IL 62701
-USA</span>
+            <span>  Sector E , 6 Shivdham Colony Limbodi , Indore - 452001 (M.P), India</span>
           </div>
         </div>
 
