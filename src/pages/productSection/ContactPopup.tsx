@@ -123,14 +123,14 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-slate-600">
                     <div className="flex items-center gap-3">
-                        <div className="p-2 bg-[#FF7722] rounded-lg">
+                        <div className="p-2 bg-red-400 rounded-lg">
                             <Building2 className="h-5 w-5 text-white" />
                         </div>
                         <h2 className="text-xl font-semibold text-white">Request Quote</h2>
                     </div>
                     <button
                         onClick={onClose}
-                        className="text-gray-400 hover:text-[#FF7722] transition-colors p-2 hover:bg-slate-600 rounded-lg"
+                        className="text-gray-400 hover:text-red-400 transition-colors p-2 hover:bg-slate-600 rounded-lg"
                     >
                         <X className="h-6 w-6" />
                     </button>
@@ -156,7 +156,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                     )}
 
                     {submitStatus === 'error' && (
-                        <div className="mb-6 bg-[#FF7722]/20 border border-[#FF7722]/50 rounded-xl p-4 text-red-100 text-center">
+                        <div className="mb-6 bg-red-400/20 border border-red-400/50 rounded-xl p-4 text-red-100 text-center">
                             ❌ Something went wrong. Please try again later.
                         </div>
                     )}
@@ -169,7 +169,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                 Full Name *
                             </label>
                             <div className="relative">
-                                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#FF7722] z-10" />
+                                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-red-400 z-10" />
                                 <input
                                     type="text"
                                     {...register('name', {
@@ -183,7 +183,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                             message: 'Name can only contain letters and spaces'
                                         }
                                     })}
-                                    className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF7722] focus:border-transparent transition-all duration-300"
+                                    className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300"
                                     placeholder="Enter your full name"
                                 />
                             </div>
@@ -200,7 +200,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                 Email Address *
                             </label>
                             <div className="relative">
-                                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#FF7722] z-10" />
+                                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-red-400 z-10" />
                                 <input
                                     type="email"
                                     {...register('email', {
@@ -210,7 +210,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                             message: 'Please enter a valid email address'
                                         }
                                     })}
-                                    className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF7722] focus:border-transparent transition-all duration-300"
+                                    className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300"
                                     placeholder="Enter your email address"
                                 />
                             </div>
@@ -242,7 +242,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                             className="phone-input-popup-theme"
                                             inputProps={{
                                                 className:
-                                                    "w-full pl-14 pr-3 py-10 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF7722] focus:border-transparent transition-all duration-300",
+                                                    "w-full pl-14 pr-3 py-[10%] bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring- focus:border-transparent transition-all duration-300",
                                                 placeholder: "Enter your phone number",
                                             }}
                                         />
@@ -264,7 +264,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                     City *
                                 </label>
                                 <div className="relative">
-                                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#FF7722] z-10" />
+                                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-red-400 z-10" />
                                     <input
                                         type="text"
                                         {...register('city', {
@@ -274,7 +274,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                                 message: 'City must be at least 2 characters'
                                             }
                                         })}
-                                        className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF7722] focus:border-transparent transition-all duration-300"
+                                        className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300"
                                         placeholder="Enter your city"
                                     />
                                 </div>
@@ -291,12 +291,12 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                     Country *
                                 </label>
                                 <div className="relative">
-                                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#FF7722] z-10" />
+                                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-red-400 z-10" />
                                     <select
                                         {...register('country', {
                                             required: 'Country is required'
                                         })}
-                                        className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF7722] focus:border-transparent transition-all duration-300 appearance-none cursor-pointer"
+                                        className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 appearance-none cursor-pointer"
                                     >
                                         <option value="" className="bg-slate-600 text-white">Select country</option>
                                         {countries.map((country) => (
@@ -320,7 +320,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                 Message *
                             </label>
                             <div className="relative">
-                                <MessageCircle className="absolute left-3 top-4 h-4 w-4 text-[#FF7722] z-10" />
+                                <MessageCircle className="absolute left-3 top-4 h-4 w-4 text-red-400 z-10" />
                                 <textarea
                                     {...register('message', {
                                         required: 'Message is required',
@@ -334,7 +334,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                                         }
                                     })}
                                     rows={4}
-                                    className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF7722] focus:border-transparent transition-all duration-300 resize-none"
+                                    className="w-full pl-10 pr-3 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 resize-none"
                                     placeholder="Tell us about your requirements..."
                                 />
                             </div>
@@ -351,7 +351,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                         {/* Export Services Info */}
                         <div className="bg-slate-600 p-4 rounded-lg border border-slate-500">
                             <h4 className="font-medium text-white mb-2 flex items-center gap-2">
-                                <Globe className="h-4 w-4 text-[#FF7722]" />
+                                <Globe className="h-4 w-4 text-red-400" />
                                 Our Export Services Include:
                             </h4>
                             <ul className="text-sm text-gray-300 space-y-1">
@@ -367,7 +367,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
                             type="button"
                             onClick={handleSubmit(onSubmit)}
                             disabled={isSubmitting || submitStatus === 'submitting'}
-                            className="w-full bg-gradient-to-r from-[#FF7722] to-[#FF7722] cursor-pointer hover:from-[#FF7722] hover:to-red-800 disabled:from-gray-500 disabled:to-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:scale-100 shadow-lg flex items-center justify-center gap-3 group"
+                            className="w-full bg-gradient-to-r from-red-400 to-red-400 cursor-pointer hover:from-red-400 hover:to-red-800 disabled:from-gray-500 disabled:to-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:scale-100 shadow-lg flex items-center justify-center gap-3 group"
                         >
                             {isPending ? (
                                 <>
@@ -387,11 +387,11 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
 
                             <div className="flex items-center justify-center space-x-6 text-sm">
                                 <div className="flex items-center text-gray-300">
-                                    <Phone className="h-4 w-4 mr-2 text-[#FF7722]" />
+                                    <Phone className="h-4 w-4 mr-2 text-red-400" />
                                     <span>+91 98765 43210</span>
                                 </div>
                                 <div className="flex items-center text-gray-300">
-                                    <Mail className="h-4 w-4 mr-2 text-[#FF7722]" />
+                                    <Mail className="h-4 w-4 mr-2 text-red-400" />
                                     <span>djfabricsfood@gmail.com</span>
                                 </div>
                             </div>

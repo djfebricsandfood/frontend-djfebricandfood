@@ -213,7 +213,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
     const {id} = useParams();
    const { data: response, isLoading } = useGetProductById(id);
 
-   console.log(response?.success)
+ 
 
   
   // Mock data - replace with your API response

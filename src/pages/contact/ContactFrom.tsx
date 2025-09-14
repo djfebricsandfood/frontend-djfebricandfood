@@ -31,7 +31,7 @@ const ContactFrom = () => {
   const onSubmit = async (data) => {
     try {
       setSubmitStatus('submitting');
-      console.log('Form Data:', data);
+     
       
       // Simulate API call
       mutate(data);

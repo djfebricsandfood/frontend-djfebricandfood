@@ -33,3 +33,9 @@ body {
   -ms-overflow-style: none;  /* IE, Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
+.PhoneInputInput {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
