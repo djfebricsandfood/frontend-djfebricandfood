@@ -248,7 +248,7 @@ const HeroSection = () => {
 
   // Memoized navigation to product page
   const handleNavigateToProduct = useCallback(() => {
-    navigate("/product/fabrics");
+    navigate("/product");
   }, [navigate]);
 
   // Memoized mouse handlers
