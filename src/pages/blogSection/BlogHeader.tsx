@@ -298,7 +298,7 @@ const BlogListing = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [error, setError] = useState(null);
 
-  const { data, isLoading: isLoadingBlog, error: apiError } = useGetBlog();
+  const { data, isLoading: isLoadingBlog, error: apiError , isFetching } = useGetBlog();
 
   // Memoized handlers
   const handleBlogClick = useCallback((blog) => {
@@ -393,7 +393,7 @@ const BlogListing = () => {
   }
 
   // Show loading state
-  if (isLoadingBlog) {
+  if (isLoadingBlog || isFetching) {
     return <LoadingSpinner message="Loading blogs..." />;
   }
 

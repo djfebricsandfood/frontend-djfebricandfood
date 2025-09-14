@@ -11,11 +11,11 @@ import { useGetCategory } from "./http/useGetCategory";
 
 const ProductGrid = () => {
 
-   const {data : categoryData , isLoading : categoryLoading} = useGetCategory();
-   const {name} = useParams()
+  const { data: categoryData, isLoading: categoryLoading } = useGetCategory();
+  const { name } = useParams()
   const [activeCategory, setActiveCategory] = useState(null);
 
-  
+
 
   const [contactPopup, setContactPopup] = useState({
     isOpen: false,
@@ -27,7 +27,7 @@ const ProductGrid = () => {
 
   useEffect(() => {
     if (categoryData && categoryData.length > 0 && !activeCategory) {
-      setActiveCategory(categoryData[0]); 
+      setActiveCategory(categoryData[0]);
     }
   }, [categoryData, activeCategory]);
 
@@ -37,7 +37,7 @@ const ProductGrid = () => {
   const apiCategory = activeCategory?.name || name || "fabrics";
   const { data, isLoading } = useGetProduct(apiCategory);
 
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const openContactPopup = (productName) => {
     setContactPopup({
       isOpen: true,
@@ -55,7 +55,7 @@ const ProductGrid = () => {
 
 
   const handleDetailsPage = (id) => {
-    navigate(`/product/${id}`); 
+    navigate(`/product/${id}`);
   };
 
   if (isLoading && categoryLoading) {
@@ -85,13 +85,12 @@ const ProductGrid = () => {
               <button
                 key={idx}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-3 cursor-pointer rounded-lg font-semibold whitespace-nowrap transition-all duration-200 ${
-                  activeCategory?.name === cat?.name || name === cat?.name
+                className={`px-6 py-3 cursor-pointer rounded-lg font-semibold whitespace-nowrap transition-all duration-200 ${activeCategory?.name === cat?.name || name === cat?.name
                     ? "bg-red-600 text-white shadow-lg transform scale-105"
                     : "bg-white text-gray-700 hover:bg-red-50 hover:text-red-600 shadow-md"
-                }`}
+                  }`}
               >
-                {cat?.heading }
+                {cat?.heading}
               </button>
             ))}
           </div>
@@ -106,13 +105,15 @@ const ProductGrid = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {products.map((product) => (
                 <div
+                  
                   key={product._id}
-                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group"
+                  className="bg-white rounded-xl shadow-md hover:shadow-xl cursor-pointer transition-all duration-300 border border-gray-100 overflow-hidden group"
                 >
                   <div className="relative overflow-hidden">
                     <img
-                      src={product.images && product.images.length > 0 
-                        ? `${imagUrl}/${product.images[0]}` 
+                    onClick={() => handleDetailsPage(product._id)}
+                      src={product.images && product.images.length > 0
+                        ? `${imagUrl}/${product.images[0]}`
                         : "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=500&q=80"
                       }
                       alt={product.name}
@@ -131,7 +132,9 @@ const ProductGrid = () => {
                     </h3>
 
                     <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                      {product.description?.replace(/\n/g, ' ').trim() || "No description available"}
+                      {product.description
+                        ? product.description.replace(/<[^>]*>/g, '').replace(/\n/g, ' ').trim()
+                        : "No description available"}
                     </p>
 
                     <div className="flex items-center justify-between mb-4">
@@ -139,7 +142,7 @@ const ProductGrid = () => {
                         {product.category}
                       </span>
                       <div onClick={() => handleDetailsPage(product._id)} className="flex items-center cursor-pointer">
-                        <Eye/>
+                        <Eye />
                       </div>
                     </div>
 

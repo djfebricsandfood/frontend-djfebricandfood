@@ -26,7 +26,6 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
         }
     });
 
-
     const [value, setValuee] = React.useState("");
 
     const handleChange = (val) => {
@@ -34,10 +33,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
             setValuee(val);
             return;
         }
-
-       
         const digitsOnly = val.replace(/\D/g, "");
-        
        console.log(digitsOnly , "digitsOnly")
         if (digitsOnly.length <= 11) {
             setValuee(val);
@@ -51,7 +47,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
     const [submitStatus, setSubmitStatus] = useState(null);
     const { mutate, isPending } = useSendEnquryMutation();
 
-    // Set initial message when productName changes
+ 
     React.useEffect(() => {
         if (productName) {
             setValue('message', `I'm interested in ${productName}. Please provide pricing and availability details.`);
@@ -60,30 +56,15 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
 
     const watchNumber = watch('number');
 
-    // useEffect(()=>{
-    //  setValue("number" , value)
-    // },[watchNumber])
 
     const onSubmit = async (data) => {
         try {
             setSubmitStatus('submitting');
-            console.log('Form Data:', data);
-
-             
-
-
-console.log(data , "data")
-             return 
-
-
-            mutate(data);
-
           
-
+            mutate(data);
             setSubmitStatus('success');
             reset();
 
-            // Reset status and close popup after showing success message
             setTimeout(() => {
                 setSubmitStatus(null);
                 onClose();

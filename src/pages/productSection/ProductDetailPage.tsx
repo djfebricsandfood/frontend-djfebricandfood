@@ -57,7 +57,7 @@ const ImageGallery = ({ images, productName }) => {
             className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-700 group-hover:scale-105"
           />
           
-          {/* Gradient overlay */}
+         
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
 
@@ -78,14 +78,14 @@ const ImageGallery = ({ images, productName }) => {
           </>
         )}
 
-        {/* Image counter */}
+       
         {images.length > 1 && (
           <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 bg-black/70 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm backdrop-blur-sm">
             {currentImage + 1} / {images.length}
           </div>
         )}
 
-        {/* Share button + popup */}
+      
         <div className="absolute top-2 sm:top-4 right-2 sm:right-4 flex flex-col items-end space-y-2">
           <button
             onClick={() => setOpen(!open)}
@@ -251,7 +251,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
     <>
       <div className="min-h-screen bg-gray-50 py-4 sm:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Breadcrumb */}
+          
           <nav className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6 overflow-x-auto">
             <span className="whitespace-nowrap">Products</span>
             <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" color='#E7000B'/>
@@ -261,14 +261,14 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-            {/* Left Column - Images */}
+            
             <div>
               <ImageGallery images={product.images || []} productName={product.name} />
             </div>
 
-            {/* Right Column - Product Info */}
+         
             <div className="space-y-4 sm:space-y-6">
-              {/* Product Title & Category */}
+              
               <div>
                 <div className="flex items-center space-x-2 mb-2">
                   <span className="bg-[#E7000B] text-white text-xs px-2 py-1 rounded-full capitalize">
@@ -278,7 +278,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 leading-tight">{product.name}</h1>
               </div>
 
-              {/* Description */}
+    
               <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
                 <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3">Product Description</h3>
                 <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
@@ -312,7 +312,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
               </div>
             )}
 
-            {/* Export Features */}
+           
             <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
               <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-4">Why Choose Us for Export</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -343,7 +343,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
               </div>
             </div>
 
-            {/* Action Buttons */}
+           
             <div className="space-y-4 sticky bottom-0 bg-gray-50 py-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:static lg:bg-transparent lg:py-0 lg:mx-0 lg:px-0">
               <button
                 onClick={() => setContactPopup(true)}
@@ -357,7 +357,7 @@ const ProductDetailPage = ({ productId = "sample-id" }) => {
         </div>
       </div>
 
-      {/* Contact Popup */}
+      
       <ContactPopup
         isOpen={contactPopup}
         onClose={() => setContactPopup(false)}

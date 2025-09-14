@@ -2,6 +2,10 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } 
 
 import logo from "../assets/DjFebricsAndFood2.png";
 import { useNavigate } from "react-router-dom";
+import Terms from '../assets/Terms-of-use.pdf';
+import privacy from '../assets/Privacy-policy.pdf';
+
+
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -222,20 +226,26 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © 2024 DJ Fabrics and Foods. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <button 
-                onClick={() => handleNavigate("terms")}
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
-              >
-                Terms of Use
-              </button>
-              <button 
-                onClick={() => handleNavigate("privacy")}
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
-              >
-                Privacy Policy
-              </button>
-            </div>
+<div className="flex space-x-6">
+  <a
+    href={Terms}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+  >
+    Terms of Use
+  </a>
+
+  <a
+    href={privacy}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+  >
+    Privacy Policy
+  </a>
+</div>
+
           </div>
         </div>
       </div>
