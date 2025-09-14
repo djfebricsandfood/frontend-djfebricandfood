@@ -34,15 +34,20 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
             return;
         }
         const digitsOnly = val.replace(/\D/g, "");
-       console.log(digitsOnly , "digitsOnly")
+     
         if (digitsOnly.length <= 11) {
             setValuee(val);
         }
 
-        setValue('number', value);
+      
 
-        console.log(value , "value")
+
     };
+
+
+    useEffect(()=>{
+         setValue('number', value);
+    },[value])
 
     const [submitStatus, setSubmitStatus] = useState(null);
     const { mutate, isPending } = useSendEnquryMutation();
@@ -54,7 +59,7 @@ const ContactPopup = ({ isOpen, onClose, productName }) => {
         }
     }, [productName, setValue]);
 
-    const watchNumber = watch('number');
+
 
 
     const onSubmit = async (data) => {
