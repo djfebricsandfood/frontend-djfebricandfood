@@ -33,13 +33,9 @@ const AboutCompanyOverView = () => {
           Our Company Overview
         </h2>
         <p className="text-gray-600 leading-relaxed mb-4">
-          Leverage agile frameworks to provide a robust synopsis for strategy
-          foster collaborative thinking to further the overall value proposition.
+         We are a leading global import-export company, committed to providing seamless solutions in international trade and global logistics. By leveraging agile strategies and innovative frameworks, we ensure efficient supply chain management, reliable shipping, and maximized value for our partners worldwide.
         </p>
-        <p className="text-gray-600 leading-relaxed mb-8">
-          Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam eaque ipsa.
-        </p>
+      
 
         {/* Features */}
         <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -47,10 +43,10 @@ const AboutCompanyOverView = () => {
             <CheckCircle className="text-red-600 w-6 h-6" />
             <div>
               <h4 className="text-lg font-semibold text-gray-800">
-                Trusted Global Network
+                Global Trade Network
               </h4>
               <p className="text-gray-600 text-sm">
-                Established partnerships across 25+ countries
+               We maintain trusted partnerships in over 25 countries, enabling smooth and efficient international trade operations for businesses of all sizes.
               </p>
             </div>
           </div>
@@ -59,10 +55,10 @@ const AboutCompanyOverView = () => {
             <CheckCircle className="text-red-600 w-6 h-6" />
             <div>
               <h4 className="text-lg font-semibold text-gray-800">
-                High Quality Standards
+                ISO-Certified Quality Standards
               </h4>
               <p className="text-gray-600 text-sm">
-                ISO certified processes and quality assurance
+             Our import-export processes follow ISO-certified protocols, ensuring high-quality assurance and compliance at every stage of the supply chain.
               </p>
             </div>
           </div>
@@ -71,10 +67,10 @@ const AboutCompanyOverView = () => {
             <CheckCircle className="text-red-600 w-6 h-6" />
             <div>
               <h4 className="text-lg font-semibold text-gray-800">
-                Trusted Global Network
+               Reliable & Timely Delivery
               </h4>
               <p className="text-gray-600 text-sm">
-                Established partnerships across 25+ countries
+              With a 99% on-time delivery record globally, we prioritize precision, reliability, and efficiency in shipping, helping your business stay competitive in international markets.
               </p>
             </div>
           </div>
@@ -83,19 +79,19 @@ const AboutCompanyOverView = () => {
             <CheckCircle className="text-red-600 w-6 h-6" />
             <div>
               <h4 className="text-lg font-semibold text-gray-800">
-                Timely Delivery
+               Comprehensive Logistics Solutions
               </h4>
               <p className="text-gray-600 text-sm">
-                99% on-time delivery record globally
+               From freight management to customs clearance, we offer end-to-end logistics support, ensuring a hassle-free import-export experience.
               </p>
             </div>
           </div>
         </div>
 
         {/* Learn More Button */}
-        <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md shadow-md font-medium transition">
+        {/* <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md shadow-md font-medium transition">
           Learn More
-        </button>
+        </button> */}
       </div>
     </section>
   );

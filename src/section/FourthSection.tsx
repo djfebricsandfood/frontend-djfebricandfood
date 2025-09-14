@@ -8,13 +8,13 @@ const FourthSection = () => {
   
   const handleNavigate = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    navigate("/product");
+    navigate(`/product` );
   };
 
   const {data , isLoading} = useGetHomeData()
 
 
-  console.log(data , "data")
+ 
 
 
 

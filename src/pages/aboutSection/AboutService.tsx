@@ -5,32 +5,32 @@ const services = [
   {
     icon: <Ship className="w-10 h-10 text-red-600" />,
     title: "Sea Transport Services",
-    desc: "Following the quality of our service thus having gained trust of our many clients.",
+    desc: "Reliable and cost-effective sea freight solutions, ensuring safe and timely delivery for international shipments.",
   },
   {
     icon: <Warehouse className="w-10 h-10 text-red-600" />,
     title: "Warehousing Services",
-    desc: "Following the quality of our service thus having gained trust of our many clients.",
+    desc: "Secure and efficient warehousing solutions designed to optimize storage, inventory management, and distribution for your goods.",
   },
   {
     icon: <Plane className="w-10 h-10 text-red-600" />,
     title: "Air Freight Services",
-    desc: "Following the quality of our service thus having gained trust of our many clients.",
+    desc: "Fast and dependable air freight services for time-sensitive shipments, ensuring global reach with precision.",
   },
   {
     icon: <Building className="w-10 h-10 text-red-600" />,
     title: "Project & Exhibition",
-    desc: "Following the quality of our service thus having gained trust of our many clients.",
+    desc: "End-to-end logistics support for large-scale projects and exhibitions, handling transportation, setup, and timely delivery.",
   },
   {
     icon: <Truck className="w-10 h-10 text-red-600" />,
     title: "Local Shipping Services",
-    desc: "Following the quality of our service thus having gained trust of our many clients.",
+    desc: "Efficient domestic transportation and last-mile delivery services to ensure your goods reach their destination safely.",
   },
   {
     icon: <ClipboardCheck className="w-10 h-10 text-red-600" />,
     title: "Customer Clearance",
-    desc: "Following the quality of our service thus having gained trust of our many clients.",
+    desc: "Expert customs clearance support to simplify import-export procedures, ensuring compliance with local and international regulations.",
   },
 ];
 
@@ -47,7 +47,7 @@ const AboutService = () => {
           </span>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-          Our Logistics Services
+         We provide comprehensive logistics and trade solutions, ensuring seamless movement of goods across borders while maintaining the highest standards of quality and reliability.
         </h2>
 
         {/* Services Grid */}
@@ -62,11 +62,11 @@ const AboutService = () => {
         </div>
 
         {/* Button */}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md shadow-md font-medium transition">
             More Works
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

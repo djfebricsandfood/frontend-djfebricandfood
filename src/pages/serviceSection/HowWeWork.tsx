@@ -10,11 +10,11 @@ const HowWeWork = () => {
           <div className="inline-flex items-center mb-3">
             <div className="w-1 h-6 bg-red-600 mr-3"></div>
             <span className="text-sm text-gray-600 uppercase font-medium tracking-wider">
-              Our Goodness
+              How We Works
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            How We Works
+            Our approach combines efficiency, safety, and sustainability to ensure seamless logistics and trade solutions. We focus on delivering value, maintaining high standards, and fostering long-term partnerships.
           </h2>
         </div>
 
@@ -45,8 +45,7 @@ const HowWeWork = () => {
                   Warehousing Services
                 </h3>
                 <p className="text-gray-600 mt-2">
-                  Leverage agile frameworks to provide a robust synopsis for
-                  strategy foster collaborative thinking.
+                  We provide modern, secure, and organized warehousing solutions to ensure safe storage and efficient management of goods, optimized for both local and international trade.
                 </p>
               </div>
             </div>
@@ -61,8 +60,7 @@ const HowWeWork = () => {
                   Safety & Quality
                 </h3>
                 <p className="text-gray-600 mt-2">
-                  Leverage agile frameworks to provide a robust synopsis for
-                  strategy foster collaborative thinking.
+                  We adhere to stringent safety protocols and quality standards, guaranteeing that every shipment is handled with care and delivered in perfect condition.
                 </p>
               </div>
             </div>
@@ -77,8 +75,7 @@ const HowWeWork = () => {
                   Care for Environment
                 </h3>
                 <p className="text-gray-600 mt-2">
-                  Leverage agile frameworks to provide a robust synopsis for
-                  strategy foster collaborative thinking.
+                  Our operations prioritize eco-friendly practices, minimizing environmental impact through sustainable logistics, energy-efficient facilities, and responsible transportation methods.
                 </p>
               </div>
             </div>

@@ -72,9 +72,9 @@ const SecondSection = () => {
         <div className="flex-1 lg:flex-shrink-0">
           <div className="relative">
             {/* Main building image placeholder */}
-            <div className="w-full h-72 lg:h-[80vh] bg-gradient-to-br my-auto  overflow-hidden shadow-xl">
+            <div className="w-full h- md:h-full lg:h-[99vh] bg-gradient-to-br my-auto  overflow-hidden shadow-xl">
               {/* Building facade mockup */}
-              <img src={Image} alt="" />
+              <img src={Image} alt="" className="w-full h-full object-cover" />
             </div>
             
             {/* Decorative elements */}
