@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { MessageSquare, Menu, X } from "lucide-react"; 
 import logo from '../../assets/Group 2487.png';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -19,12 +20,13 @@ const Navbar = () => {
     { name: "CONTACT US", path: "/contact-us" },
   ];
 
+
   return (
     <div className="bg-white shadow-md py-4 px-4 sm:px-6 relative">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Left: Logo */}
-        <div className="flex-shrink-0">
+        <div onClick={() => navigate("/")} className="flex-shrink-0 cursor-pointer">
           <img src={logo} alt="Logo" className="h-10 md:h-12 w-auto" />
         </div>
 

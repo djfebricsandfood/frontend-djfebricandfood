@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Star, ShoppingCart, X, Phone, Mail, MapPin, Send, Eye } from "lucide-react";
 import { useGetProduct } from "./http/useGetProduct";
 import { imagUrl } from "../../utils/tokenHelper";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ContactPopup from "./ContactPopup";
 import { useGetCategory } from "./http/useGetCategory";
 
@@ -11,17 +11,21 @@ import { useGetCategory } from "./http/useGetCategory";
 
 const ProductGrid = () => {
 
-
+   const {data : categoryData , isLoading : categoryLoading} = useGetCategory();
+   const {name} = useParams()
   const [activeCategory, setActiveCategory] = useState(null);
+
+  
+
   const [contactPopup, setContactPopup] = useState({
     isOpen: false,
     productName: ""
   });
 
-   const {data : categoryData , isLoading : categoryLoading} = useGetCategory();
 
 
-     useEffect(() => {
+
+  useEffect(() => {
     if (categoryData && categoryData.length > 0 && !activeCategory) {
       setActiveCategory(categoryData[0]); 
     }
@@ -30,7 +34,7 @@ const ProductGrid = () => {
 
 
 
-  const apiCategory = activeCategory?.name || "fruits-vegetables";
+  const apiCategory = activeCategory?.name || name || "fabrics";
   const { data, isLoading } = useGetProduct(apiCategory);
 
    const navigate = useNavigate();
@@ -54,7 +58,7 @@ const ProductGrid = () => {
     navigate(`/product/${id}`); 
   };
 
-  if (isLoading || categoryLoading) {
+  if (isLoading && categoryLoading) {
     return (
       <div className="flex items-center justify-center py-20">
         <div className="text-center">
@@ -81,13 +85,13 @@ const ProductGrid = () => {
               <button
                 key={idx}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all duration-200 ${
-                  activeCategory?.heading === cat?.heading
+                className={`px-6 py-3 cursor-pointer rounded-lg font-semibold whitespace-nowrap transition-all duration-200 ${
+                  activeCategory?.name === cat?.name || name === cat?.name
                     ? "bg-red-600 text-white shadow-lg transform scale-105"
                     : "bg-white text-gray-700 hover:bg-red-50 hover:text-red-600 shadow-md"
                 }`}
               >
-                {cat?.heading}
+                {cat?.heading }
               </button>
             ))}
           </div>

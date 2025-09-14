@@ -1,14 +1,14 @@
 
 import { Package, Truck, Globe, Clock, DollarSign, Headphones, Play } from "lucide-react";
-import foodQulity from "../assets/Food_Quality.jpg"
+import foodQulity from "../assets/mnf.mp4"
 
 const QualityTrustSection = () => {
   return (
     <div className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Side - Image with Video */}
           <div className="relative">
             {/* Main Image */}
@@ -16,11 +16,16 @@ const QualityTrustSection = () => {
               <div className="aspect-[4/5] bg-gradient-to-br from-orange-100 to-orange-200">
                 {/* Professional in hard hat looking at tablet */}
                 <div className="relative w-full h-full bg-gradient-to-b from-orange-200 to-orange-300 flex items-center justify-center">
-              
-                      <img className="h-full w-full object-cover" src={foodQulity} alt="" />
-                    
-                    
+                  <video
+                    className="h-full w-full object-cover"
+                    src={foodQulity}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
                 </div>
+
               </div>
             </div>
 
@@ -48,22 +53,22 @@ const QualityTrustSection = () => {
                   Why Choose Us
                 </span>
               </div>
-              
+
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
                 Our Best Quality Products<br />
                 Will <span className="text-red-600">Build Your Trust</span>
               </h2>
-              
+
               <p className="text-gray-600 text-lg leading-relaxed">
-                Our commitment to quality, timely delivery, and customer satisfaction 
-                has earned us partnerships across continents. We bridge traditional 
+                Our commitment to quality, timely delivery, and customer satisfaction
+                has earned us partnerships across continents. We bridge traditional
                 craftsmanship with modern business practices.
               </p>
             </div>
 
             {/* Features Grid */}
             <div className="grid grid-cols-2 gap-6">
-              
+
               {/* Safe Package */}
               <div className="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
@@ -114,7 +119,7 @@ const QualityTrustSection = () => {
 
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

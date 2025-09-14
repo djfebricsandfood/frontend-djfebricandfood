@@ -91,9 +91,9 @@ const TestimonialSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
           <div>
-            <h3 className="text-3xl font-bold text-gray-900">24</h3>
+            <h3 className="text-3xl font-bold text-gray-900">50+</h3>
             <p className="text-gray-600 mt-2">Our Location</p>
           </div>
           <div>
@@ -108,7 +108,7 @@ const TestimonialSection = () => {
             <h3 className="text-3xl font-bold text-gray-900">247+</h3>
             <p className="text-gray-600 mt-2">Owned Vehicles</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

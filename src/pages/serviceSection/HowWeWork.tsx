@@ -1,5 +1,6 @@
 
 import { Package, ShieldCheck, Leaf } from "lucide-react";
+import foodQulity from '../../assets/mnf.mp4'
 
 const HowWeWork = () => {
   return (
@@ -20,18 +21,16 @@ const HowWeWork = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Images */}
-          <div className="flex flex-col space-y-6">
-            <img
-              src="https://images.unsplash.com/photo-1600488999208-2b0b13c6a21b?auto=format&fit=crop&w=800&q=80"
-              alt="Warehouse Worker"
-              className="rounded-lg shadow-lg"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1595433562696-19b7b7d79a9d?auto=format&fit=crop&w=800&q=80"
-              alt="Storage Facility"
-              className="rounded-lg shadow-lg w-3/4 mx-auto"
-            />
-          </div>
+          <div className="relative w-full h-[70vh] bg-gradient-to-b from-orange-200 to-orange-300 flex items-center justify-center">
+                  <video
+                    className="h-full w-full object-cover"
+                    src={foodQulity}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                </div>
 
           {/* Right: Features */}
           <div className="space-y-8">

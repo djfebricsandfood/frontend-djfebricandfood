@@ -12,6 +12,6 @@ export const useGetProduct = (activeCategory) => {
   return useQuery({
     queryKey: ["home" , activeCategory],
     queryFn: ()=>fetchData(activeCategory),
-    refetchOnWindowFocus: false,
+    refetchOnWindowFocus: true,
   });
 };

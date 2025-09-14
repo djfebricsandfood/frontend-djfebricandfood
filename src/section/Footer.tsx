@@ -79,7 +79,7 @@ const Footer = () => {
                 <button
                   disabled
                   onClick={() => handleNavigate("work-at-future-learn")}
-                  className="text-gray-100  pointer-events-none transition-all duration-300 text-left"
+                  className="text-gray-600  pointer-events-none transition-all duration-300 text-left"
                 >
                   → Careers
                 </button>
